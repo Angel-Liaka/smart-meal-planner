@@ -1,94 +1,59 @@
-# MEMBER 1 – FOUNDATIONS  
-## Smart Meal Planner Expert System  
-### APA 7 Academic Documentation  
-
----
+# Member 1 Foundations: Expert Systems and Meal Planning
 
 ## 1. Introduction
+Expert systems are computer programs that mimic the decision-making ability of a human expert. They use a set of rules and a knowledge base to provide solutions to specific problems.  
 
-Expert systems are a major application area of artificial intelligence (AI) designed to simulate the decision-making ability of a human expert within a specific domain. These systems use structured knowledge and logical reasoning techniques to provide recommendations, diagnoses, or solutions to complex problems. Unlike traditional software systems that follow predefined procedural instructions, expert systems rely on encoded domain knowledge and inference mechanisms to reach conclusions in a manner similar to human specialists.
-
-Expert systems have been widely applied in healthcare, finance, agriculture, and education to support decision-making processes. One promising application area is personalized meal planning. Meal planning requires consideration of multiple factors, including dietary preferences, nutritional requirements, allergies, health conditions, cultural considerations, and lifestyle goals. Managing these variables manually can be complex and time-consuming.
-
-This project proposes the conceptual development of a rule-based smart meal planning expert system. The purpose of this document is to present the theoretical foundation of expert systems and explain how rule-based reasoning can be applied to support intelligent dietary recommendations. By integrating structured knowledge with logical inference, the proposed system aims to provide personalized, consistent, and reliable meal planning advice.
+This document introduces a **rule-based meal planning system**, which can assist users in selecting meals based on dietary needs and preferences. The purpose of this work is to establish the theoretical foundation for developing a smart meal planner.
 
 ---
 
 ## 2. Background on Expert Systems
 
-### 2.1 Definition of an Expert System
+### What is an Expert System?
+An expert system is a computer application designed to solve complex problems by reasoning through knowledge, rather than through conventional programming.  
 
-An expert system is a computer-based system that emulates the decision-making capabilities of a human expert within a specific field (Russell & Norvig, 2021). It uses a structured knowledge base and reasoning mechanisms to solve problems that typically require specialized expertise. The primary goal of an expert system is to assist users in making informed decisions by providing recommendations or explanations based on stored knowledge.
+### Rule-Based Systems
+A rule-based system uses **IF–THEN rules** to make decisions. It evaluates conditions (IF) and executes actions (THEN) based on the knowledge base.
 
-Expert systems are a subset of artificial intelligence that emphasize knowledge representation and logical reasoning rather than machine learning-based pattern recognition.
+### Key Components
+1. **Knowledge Base** – Stores facts and rules relevant to the domain.  
+2. **Inference Engine** – Processes the rules and derives conclusions.  
+3. **User Interface** – Allows interaction between the user and the system.
 
----
-
-### 2.2 Rule-Based Systems
-
-A rule-based system is one of the most common types of expert systems. It operates using a collection of IF–THEN rules that define relationships between conditions and actions (Giarratano & Riley, 2005). These rules represent expert knowledge in a structured and logical format.
-
-Example rules for the Smart Meal Planner:
-
-- IF a user is vegetarian  
-  THEN recommend plant-based protein meals  
-
-- IF a user has diabetes  
-  THEN avoid high-sugar food options  
-
-- IF a user wants weight loss  
-  THEN recommend calorie-controlled meals  
-
-Rule-based systems are particularly effective in domains where decisions can be structured logically and clearly defined.
+### Reasoning Methods
+- **Forward Chaining:** Starts with known facts and applies rules to infer new facts until a goal is reached.  
+- **Backward Chaining:** Starts with a goal and works backward to determine which facts support it.
 
 ---
 
-### 2.3 Components of an Expert System
-
-#### 1. Knowledge Base
-
-The knowledge base stores domain-specific facts and rules. In the Smart Meal Planner system, it may include:
-
-- Nutritional guidelines  
-- Calorie requirements  
-- Dietary restrictions  
-- Food categories  
-- Health-based dietary recommendations  
-
-The accuracy and completeness of the knowledge base determine the system’s reliability.
-
-#### 2. Inference Engine
-
-The inference engine is the reasoning component of the expert system. It applies logical rules to user inputs to derive conclusions. It determines which rules are activated and produces appropriate recommendations.
-
-Two primary reasoning strategies are used:
-
-- Forward chaining  
-- Backward chaining  
-
-#### 3. User Interface
-
-The user interface allows interaction between the user and the system. It collects user inputs such as age, dietary preference, allergies, and health conditions, and displays personalized meal recommendations.
-
----
-### 2.4 Forward and Backward Chaining
-
-Forward chaining is a data-driven reasoning approach. It begins with user-provided facts and applies rules to generate conclusions. For example, if a user indicates lactose intolerance, the system automatically eliminates dairy-based meals.
-
-Backward chaining is a goal-driven reasoning approach. It starts with a potential conclusion and works backward to determine whether the conditions supporting that conclusion are satisfied. For example, the system may evaluate whether a high-protein meal recommendation aligns with the user's dietary goals.
-
-Both reasoning techniques enhance the flexibility and effectiveness of rule-based expert systems.
+## 3. Meal Planning & Dietary Research
+Meal planning systems use expert knowledge about nutrition and dietary requirements. They can:  
+- Suggest meals that meet caloric and nutritional needs.  
+- Adapt recommendations for allergies, preferences, or specific diets.  
+- Provide structured plans for healthy eating.
 
 ---
 
-## 3. Conclusion
-
-Expert systems provide a structured framework for simulating expert-level decision-making using rule-based reasoning and knowledge representation techniques. By integrating a knowledge base, inference engine, and user interface, such systems can support complex decision processes. In the context of meal planning, a rule-based expert system offers a logical and practical approach to generating personalized dietary recommendations.
+## 4. Problem Statement
+Manual meal planning can be time-consuming and error-prone. Users may struggle to balance nutrition, taste, and dietary restrictions. A **smart expert system** can automate this process and provide accurate, personalized meal recommendations.
 
 ---
 
-## References
+## 5. Proposed System Design (Conceptual)
+The system will:  
+- Use a **knowledge base** containing nutritional facts and meal rules.  
+- Employ a **rule-based inference engine** to recommend meals.  
+- Offer a **simple user interface** for inputting preferences and dietary restrictions.  
+- Generate meal plans that satisfy user requirements efficiently.
 
-Giarratano, J., & Riley, G. (2005). *Expert systems: Principles and programming* (4th ed.). Thomson Course Technology.
+---
 
-Russell, S., & Norvig, P. (2021). *Artificial intelligence: A modern approach* (4th ed.). Pearson.
+## 6. Conclusion
+Rule-based expert systems can simplify complex decision-making, such as meal planning. By leveraging a knowledge base and inference engine, a smart meal planner can provide accurate and personalized meal suggestions.
+
+---
+
+## 7. References
+- Turban, E., & Aronson, J. E. (2001). *Decision Support Systems and Intelligent Systems*. Prentice Hall.  
+- Giarratano, J., & Riley, G. (2005). *Expert Systems: Principles and Programming*. Thomson Course Technology.  
+- Nutrition and Health Websites, 2026.

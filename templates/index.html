@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Meal Planner</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Smart Meal Planner</h1>
+        <p class="welcome-text"> Fill in your details below to receive your personalized meal plan </p>
+
+        <form action="/results" method="post">
+            
+            <h2>Personal Information</h2>
+            Age: <input type="number" name="age" required><br>
+            Sex: 
+            <select name="sex" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select><br>
+            Weight (kg): <input type="number" name="weight" step="0.1" required><br>
+            Height (cm): <input type="number" name="height" step="0.1" required><br>
+
+            <h2>Activity Level</h2>
+            <select name="activity_level" required>
+                <option value="sedentary">Sedentary</option>
+                <option value="lightly_active">Lightly active</option>
+                <option value="moderately_active">Moderately active</option>
+                <option value="very_active">Very active</option>
+                <option value="extremely_active">Extremely active</option>
+            </select><br>
+
+            <h2>Diet</h2>
+            <select name="diet" required>
+                <option value="omnivore">Omnivore</option>
+                <option value="vegetarian">Vegetarian</option>
+                <option value="vegan">Vegan</option>
+                <option value="pescatarian">Pescatarian</option>
+            </select><br>
+
+            <h2>Allergies</h2>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="allergies" value="lactose"> Lactose</label>
+                <label><input type="checkbox" name="allergies" value="gluten"> Gluten</label>
+                <label><input type="checkbox" name="allergies" value="nuts"> Nuts</label>
+                <label><input type="checkbox" name="allergies" value="eggs"> Eggs</label>
+            </div>
+
+            <h2>Goal</h2>
+            <select name="goal" required>
+                <option value="maintain">Maintain weight</option>
+                <option value="high_protein">High protein</option>
+                <option value="low_carb">Low carb</option>
+                <option value="weight_loss">Weight loss</option>
+                <option value="muscle_gain">Muscle gain</option>
+            </select><br>
+
+            <h2>Budget</h2>
+            <select name="budget" required>
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select><br>
+
+            <h2>Preparation Time</h2>
+            <select name="prep_time" required>
+                <option value="quick">Quick</option>
+                <option value="moderate">Moderate</option>
+                <option value="elaborate">Elaborate</option>
+            </select><br>
+
+            <h2>Meal Type</h2>
+            <select name="meal_type" required>
+                <option value="breakfast">Breakfast</option>
+                <option value="lunch">Lunch</option>
+                <option value="dinner">Dinner</option>
+                <option value="snack">Snack</option>
+            </select><br><br>
+           
+            <div class="form-buttons">
+    
+    <button type="reset" class="go-back">Clear</button>
+    <button type="submit" class="cta-button">Get Meal Plan</button>
+</div>
+        </form>
+        <a href="/">🔄 Go Back</a>
+        
+    </div>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Meal Plan Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Your Personalized Meal Plan</h1>
+
+        <div class="result-section">
+            <h2>Daily Calories</h2>
+            <p>Daily Target: {{ calories.daily_calories }} kcal (BMR: {{ calories.bmr }}, Activity: {{ calories.activity_multiplier }}x)</p>
+            <p>{{ user_data.meal_type.title() }} Target: {{ meal_calories }} kcal</p>
+        </div>
+
+        <div class="result-section">
+            <h2>Excluded Ingredients</h2>
+            {% if applied_rules.excludes %}
+                <ul>
+                {% for item in applied_rules.excludes %}
+                    <li>{{ item.replace("_"," ").title() }}</li>
+                {% endfor %}
+                </ul>
+            {% else %}
+                <p>No restrictions based on your inputs</p>
+            {% endif %}
+        </div>
+
+        <div class="result-section">
+            <h2>Prioritized Foods</h2>
+            {% if applied_rules.prioritizes %}
+                <ul>
+                {% for item in applied_rules.prioritizes %}
+                    <li>{{ item.replace("_"," ").title() }}</li>
+                {% endfor %}
+                </ul>
+            {% else %}
+                <p>No specific priorities</p>
+            {% endif %}
+        </div>
+
+        <div class="result-section">
+            <h2>Special Constraints</h2>
+            {% if applied_rules.constraints %}
+                {% for key, value in applied_rules.constraints.items() %}
+                    {% if key != "prioritize" and key != "exclude" %}
+                        <p><strong>{{ key.replace("_"," ").title() }}:</strong> {{ value.description }}</p>
+                        {% if value.prioritize %}
+                            <ul>
+                                {% for item in value.prioritize %}
+                                    <li>{{ item.replace("_"," ").title() }}</li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
+                    {% endif %}
+                {% endfor %}
+            {% else %}
+                <p>No special constraints</p>
+            {% endif %}
+        </div>
+
+        <div class="result-section">
+            <h2>Summary of Your Inputs</h2>
+            <ul>
+                <li><strong>Diet:</strong> {{ user_data.diet.title() }}</li>
+                <li><strong>Allergies:</strong> {% if user_data.allergies %}{{ user_data.allergies | join(', ') | replace("_"," ") | title }}{% else %}None{% endif %}</li>
+                <li><strong>Goal:</strong> {{ user_data.goal.replace("_"," ").title() }}</li>
+                <li><strong>Budget:</strong> {{ user_data.budget.title() }}</li>
+                <li><strong>Prep Time:</strong> {{ user_data.prep_time.title() }}</li>
+            </ul>
+        </div>
+        <div class="result-section">
+    <h2>Recommended Meals</h2>
+    {% if meals %}
+        <ul>
+        {% for meal in meals %}
+            <li>
+                <strong>{{ meal.name }}</strong> 
+                - {{ meal.protein }}g protein
+                {% if meal.contains %} (Contains: {{ meal.contains | join(', ') | replace("_"," ") | title }}){% endif %}
+            </li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No meals match your current preferences.</p>
+    {% endif %}
+</div>
+
+        <a href="/form" >🔄Go Back</a>
+    </div>
+</body>
+</html>

@@ -1,38 +1,59 @@
-﻿# Smart Meal Planner
+﻿# 🍽️ Smart Meal Planner
 
-Because deciding what to eat should not be the hardest part of your day
+**Because deciding what to eat should not be the hardest part of your day**
 
-## What is this?
 
-A rule-based expert system that recommends personalized meals based on your diet type, allergies, nutrition goals, and budget.
 
-## Progress
+## 📌 What is this?
 
-### Week 1
-- Expert system theory
-- Diet and nutrition research
-- System architecture planned
+Smart Meal Planner is a **rule-based expert system** that generates personalized meal recommendations based on a user’s:
 
-### Week 2
-- IF-THEN rules written
-- 15 plus meals dataset created
-- CLI interface designed
+- Diet type  
+- Allergies  
+- Health goals  
+- Budget  
+- Preparation time  
 
-## How It Works
+It applies structured IF-THEN rules to filter a dataset of meals and return suitable options.
 
-User Input -> Apply Rules -> Filter Meals -> Display Results
 
-## How to Run
 
-1. Make sure meals.json is in the project folder
-2. Run the CLI script
-3. Answer the questions about your diet and goals
-4. Get your personalized meal suggestions
+## 🚀 Features
 
-## Important Notes
+- Personalized meal recommendations  
+- Rule-based filtering system  
+- Dietary restriction support (vegan, vegetarian, pescatarian)  
+- Allergy-aware suggestions  
+- Budget-conscious meal planning  
+- Simple web-based user interface  
 
-- Tags must match exactly
-- CLI version recommended
-- Rules and dataset must stay in sync
 
-Made with love by the Smart Meal Planner Team
+
+## 🧠 How It Works
+1. User enters preferences through the interface  
+2. System applies dietary and nutrition rules  
+3. Meals are filtered based on constraints  
+4. Matching meals are displayed  
+
+
+
+## 🗂️ Project Structure
+smart-meal-planner/
+│
+├── app.py
+├── meals.json
+├── rules/
+│ └── dietary_rules.py
+├── templates/
+├── static/
+└── README.md
+
+
+
+## ▶️ How to Run
+
+1. Run the application:
+python app.py
+2. Open your browser and go to:
+http://127.0.0.1:5000/
+3. Enter your details to get your personalized meal plan.

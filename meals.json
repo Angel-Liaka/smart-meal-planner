@@ -1,0 +1,28 @@
+[
+  {"name":"Oatmeal with Fruits","type":"breakfast","diet":["vegan"],"protein":8,"contains":[]},
+  {"name":"Scrambled Eggs","type":"breakfast","diet":["high_protein"],"protein":20,"contains":["eggs"]},
+  {"name":"Pancakes","type":"breakfast","diet":["vegetarian"],"protein":10,"contains":["milk","eggs"]},
+  {"name":"Fruit Smoothie","type":"breakfast","diet":["vegetarian"],"protein":6,"contains":["milk"]},
+  {"name":"Avocado Toast","type":"breakfast","diet":["vegan","low_carb"],"protein":7,"contains":[]},
+  {"name":"Boiled Eggs","type":"breakfast","diet":["high_protein"],"protein":13,"contains":["eggs"]},
+
+  {"name":"Grilled Chicken Salad","type":"lunch","diet":["high_protein"],"protein":30,"contains":["chicken"]},
+  {"name":"Vegetable Stir Fry","type":"lunch","diet":["vegan","low_carb"],"protein":12,"contains":[]},
+  {"name":"Beef Burger","type":"lunch","diet":["high_protein"],"protein":28,"contains":["beef"]},
+  {"name":"Cheese Sandwich","type":"lunch","diet":["vegetarian"],"protein":12,"contains":["cheese"]},
+  {"name":"Egg Salad","type":"lunch","diet":["high_protein"],"protein":18,"contains":["eggs"]},
+  {"name":"Tofu Salad","type":"lunch","diet":["vegan","high_protein"],"protein":20,"contains":[]},
+  {"name":"Quinoa Salad","type":"lunch","diet":["vegan","high_protein"],"protein":18,"contains":[]},
+  {"name":"Turkey Sandwich","type":"lunch","diet":["high_protein"],"protein":22,"contains":["turkey"]},
+  {"name":"Rice and Beans","type":"lunch","diet":["vegan"],"protein":15,"contains":[]},
+  {"name":"Almond Salad","type":"lunch","diet":["vegetarian"],"protein":10,"contains":["almonds"]},
+
+  {"name":"Lentil Soup","type":"dinner","diet":["vegan","high_protein"],"protein":22,"contains":[]},
+  {"name":"Grilled Fish","type":"dinner","diet":["high_protein","low_carb"],"protein":25,"contains":["fish"]},
+  {"name":"Chicken Pasta","type":"dinner","diet":["high_protein"],"protein":26,"contains":["chicken","milk"]},
+  {"name":"Vegetable Curry","type":"dinner","diet":["vegan"],"protein":15,"contains":[]},
+  {"name":"Roasted Chicken","type":"dinner","diet":["high_protein","low_carb"],"protein":32,"contains":["chicken"]},
+  {"name":"Grilled Tofu","type":"dinner","diet":["vegan","high_protein","low_carb"],"protein":24,"contains":[]},
+  {"name":"Steamed Vegetables","type":"dinner","diet":["vegan","low_carb"],"protein":10,"contains":[]},
+  {"name":"Chicken Stir Fry","type":"dinner","diet":["high_protein"],"protein":28,"contains":["chicken"]}
+]

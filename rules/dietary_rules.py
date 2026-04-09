@@ -5,7 +5,7 @@ Member 1: Rule Designer
 
 # Complete rules dictionary
 RULES = {
-    # ========== DIETARY RESTRICTIONS ==========
+    #  DIETARY RESTRICTIONS 
     "vegan": {
         "exclude": ["meat", "poultry", "fish", "seafood", "dairy", "eggs", "honey"],
         "prioritize": ["legumes", "tofu", "tempeh", "plant_protein", "nutritional_yeast"],
@@ -24,7 +24,7 @@ RULES = {
         "description": "Vegetarian plus fish and seafood"
     },
     
-    # ========== ALLERGIES ==========
+    #  ALLERGIES 
     "lactose_intolerance": {
         "exclude": ["milk", "cheese", "yogurt", "cream", "butter", "whey", "casein"],
         "suggest": ["almond_milk", "soy_milk", "oat_milk", "coconut_yogurt", "lactose_free"],
@@ -48,7 +48,7 @@ RULES = {
         "description": "Excludes eggs and egg products"
     },
     
-    # ========== HEALTH GOALS ==========
+    #  HEALTH GOALS 
     "high_protein": {
         "min_protein_per_meal": 20,
         "prioritize": [
@@ -83,7 +83,7 @@ RULES = {
         "description": "Supports muscle growth with surplus calories"
     },
     
-    # ========== ACTIVITY LEVELS ==========
+    #  ACTIVITY LEVELS 
     "activity_multipliers": {
         "sedentary": 1.2,
         "lightly_active": 1.375,
@@ -92,7 +92,7 @@ RULES = {
         "extremely_active": 1.9
     },
     
-    # ========== MEAL DISTRIBUTION ==========
+    #  MEAL DISTRIBUTION 
     "meal_distribution": {
         "breakfast": {"percentage": 0.25, "min_protein": 15},
         "lunch": {"percentage": 0.30, "min_protein": 20},
@@ -100,26 +100,26 @@ RULES = {
         "snack": {"percentage": 0.15, "min_protein": 5}
     },
     
-    # ========== BUDGET CONSTRAINTS ==========
+    #  BUDGET CONSTRAINTS 
     "budget": {
         "low": {
-            "max_cost_per_meal": 3.50,
+            "max_cost_per_meal": 350,
             "prioritize": ["beans", "lentils", "rice", "oats", "eggs", "seasonal_vegetables"],
             "description": "Budget-conscious ingredients"
         },
         "medium": {
-            "max_cost_per_meal": 7.00,
+            "max_cost_per_meal": 700,
             "allow": ["moderate_meat", "fresh_produce", "some_organic"],
             "description": "Balanced cost and quality"
         },
         "high": {
-            "max_cost_per_meal": 12.00,
+            "max_cost_per_meal": 1200,
             "allow": ["premium_ingredients", "organic", "specialty_items"],
             "description": "Premium ingredients allowed"
         }
     },
     
-    # ========== TIME CONSTRAINTS ==========
+    #  TIME CONSTRAINTS 
     "prep_time": {
         "quick": {
             "max_minutes": 15,
@@ -198,7 +198,7 @@ def calculate_daily_calories(user_data):
     sex = user_data.get("sex")
     activity = user_data.get("activity_level", "moderately_active")
     
-    # BMR Calculation (Mifflin-St Jeor Equation)
+    # BMR Calculation 
     if sex == "male":
         bmr = (10 * weight) + (6.25 * height) - (5 * age) + 5
     else:

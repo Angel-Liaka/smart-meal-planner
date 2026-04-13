@@ -4,7 +4,7 @@
 
 
 
-## 📌 What is this?
+##  What is this?
 
 Smart Meal Planner is a **rule-based expert system** that generates personalized meal recommendations based on a user’s:
 
@@ -18,7 +18,7 @@ It applies structured IF-THEN rules to filter a dataset of meals and return suit
 
 
 
-## 🚀 Features
+##  Features
 
 - Personalized meal recommendations  
 - Rule-based filtering system  
@@ -29,7 +29,7 @@ It applies structured IF-THEN rules to filter a dataset of meals and return suit
 
 
 
-## 🧠 How It Works
+##  How It Works
 1. User enters preferences through the interface  
 2. System applies dietary and nutrition rules  
 3. Meals are filtered based on constraints  
@@ -37,7 +37,7 @@ It applies structured IF-THEN rules to filter a dataset of meals and return suit
 
 
 
-## 🗂️ Project Structure
+##  Project Structure
 smart-meal-planner/
 │
 ├── app.py
@@ -50,7 +50,7 @@ smart-meal-planner/
 
 
 
-## ▶️ How to Run
+##  How to Run
 
 1. Run the application:
 python app.py
